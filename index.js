@@ -21,3 +21,6 @@ main()
     await prisma.$disconnect();
     process.exit(1);
   });
+
+
+  // Continued reading about Prisma ORM
