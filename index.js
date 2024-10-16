@@ -4,6 +4,10 @@ const prisma = new PrismaClient();
 
 async function main() {
 
+  // await prisma.post.deleteMany();
+  // await prisma.profile.deleteMany();
+  // await prisma.user.deleteMany();
+
   const allUsers = await prisma.user.findMany({
     include: {
       posts: true,
