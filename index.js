@@ -8,13 +8,14 @@ async function main() {
   // await prisma.profile.deleteMany();
   // await prisma.user.deleteMany();
 
-  // const allUsers = await prisma.user.findMany({
-  //   include: {
-  //     posts: true,
-  //     profile: true
-  //   }
-  // })
-  // console.log(allUsers)
+  const allUsers = await prisma.user.findMany({
+    include: {
+      posts: true,
+      profile: true
+    }
+  })
+  // console.log(JSON.stringify(allUsers));
+  console.log(allUsers);
 
   // await prisma.user.create({
   //   data: {
@@ -39,14 +40,11 @@ async function main() {
 
 
 
-  const post = await prisma.post.update({
-    where: { id: 2 },
-    data: { published: true },
-  })
-  console.log(post)
-
-
-
+  // const post = await prisma.post.update({
+  //   where: { id: 2 },
+  //   data: { published: true },
+  // })
+  // console.log(post)
 
   }
 
